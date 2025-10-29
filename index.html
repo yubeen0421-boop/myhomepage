@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명신여고 [학생 이름]의 코딩 포트폴리오</title>
+    <!-- Tailwind CSS CDN 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter 폰트 설정 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* 밝은 회색 배경 */
+        }
+        /* 스크롤 애니메이션 초기 상태 (CSS) */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        /* JavaScript로 이 클래스를 추가하여 애니메이션 실행 */
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* 스크롤바 디자인 (세련된 Indigo 계열) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e7ff; /* indigo-100 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; /* indigo-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4338ca; /* indigo-700 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 🌟 헤더 (Header) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-indigo-600 hover:text-indigo-700 transition duration-300">
+                Code by 명신인
+            </a>
+            <nav class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">소개</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">프로젝트</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">연락</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 🌈 히어로 / 소개 섹션 (About) - 무지개 그라데이션 -->
+        <section id="about" class="py-20 md:py-32 text-white text-center fade-in-on-scroll
+                                    bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-500">
+            <div class="max-w-4xl mx-auto px-4">
+                <!-- 이름은 사용자님이 직접 수정하신 부분 유지 -->
+                <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tight">
+                    안녕하세요! 한유빈 입니다 💡
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-8 opacity-90">
+                    명신여고 1학년, 코딩으로 다양한 앱과 챗봇을 만들며 즐거움을 찾고 있습니다.
+                </p>
+                <div class="inline-block p-3 bg-indigo-700 rounded-lg shadow-xl hover:bg-indigo-800 transition duration-300 transform hover:scale-105 cursor-pointer">
+                    <a href="#projects" class="text-white text-lg font-semibold">작품 보러가기 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🚀 프로젝트 섹션 (Projects) -->
+        <section id="projects" class="py-16 md:py-24 max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-600 fade-in-on-scroll">
+                ✨ 나의 작품들 (Apps & Chatbots)
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 프로젝트 카드 1: 자홍색 (Fuchsia) 포인트 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 fade-in-on-scroll">
+                    <div class="text-3xl text-fuchsia-500 mb-3">🤖</div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-900">똑똑한 학교 생활 챗봇</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Python과 LLM API를 활용하여 만든 챗봇입니다. 급식 정보, 시간표, 학교 공지사항 등을 실시간으로 알려줍니다.
+                    </p>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="[데모 링크]" target="_blank" class="bg-fuchsia-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-fuchsia-600 transition">데모 보기</a>
+                        <a href="[GitHub 링크]" target="_blank" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition">코드 (GitHub)</a>
+                    </div>
+                </article>
+
+                <!-- 프로젝트 카드 2: 청록색 (Cyan) 포인트 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 fade-in-on-scroll">
+                    <div class="text-3xl text-cyan-500 mb-3">🎨</div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-900">나만의 컬러 팔레트 생성 앱</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        JavaScript와 Tailwind CSS를 사용하여 만든 웹 앱입니다. 무작위로 아름다운 색상 조합을 생성하고 복사할 수 있습니다.
+                    </p>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="[데모 링크]" target="_blank" class="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 transition">데모 보기</a>
+                        <a href="[GitHub 링크]" target="_blank" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition">코드 (GitHub)</a>
+                    </div>
+                </article>
+
+                <!-- 프로젝트 카드 3: 호박색 (Amber) 포인트 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 fade-in-on-scroll">
+                    <div class="text-3xl text-amber-500 mb-3">💡</div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-900">새로운 아이디어 구상 중</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        현재 다음 프로젝트로 [관심 있는 기술: React, Game Dev 등]을(를) 활용한 [새로운 아이디어]를 기획하고 있습니다. 기대해주세요!
+                    </p>
+                    <div class="flex space-x-3 mt-4">
+                        <span class="bg-yellow-400 text-gray-800 px-4 py-2 rounded-full text-sm font-medium">Coming Soon</span>
+                    </div>
+                </article>
+                
+                <!-- 더 많은 프로젝트를 추가할 때, 각 프로젝트에 다른 포인트 컬러를 사용해 보세요! (e.g., green-500, red-500 등) -->
+
+            </div>
+        </section>
+
+        <!-- 📧 연락처 섹션 (Contact) -->
+        <section id="contact" class="py-16 md:py-24 bg-white text-center fade-in-on-scroll">
+            <div class="max-w-2xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-6 text-indigo-600">💌 함께 이야기 나눠요</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    저의 코딩 작품에 대해 궁금한 점이나, 함께 해보고 싶은 프로젝트가 있다면 언제든지 연락 주세요!
+                </p>
+                <div class="space-y-4">
+                    <p class="text-xl font-medium">📧 이메일: <a href="mailto:[본인 이메일]" class="text-indigo-600 hover:underline">[본인 이메일 주소]</a></p>
+                    <p class="text-xl font-medium">🔗 GitHub: <a href="[본인 GitHub 링크]" target="_blank" class="text-indigo-600 hover:underline">github.com/[ID]</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 🦶 푸터 (Footer) -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 [학생 이름]. All rights reserved. | 명신여고 코딩 포트폴리오</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity (Fade-in on Scroll) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 관찰할 요소들을 선택합니다. (프로젝트 카드와 섹션)
+            const elementsToObserve = document.querySelectorAll('.fade-in-on-scroll');
+
+            const observerOptions = {
+                root: null, // 뷰포트를 기준으로 관찰
+                rootMargin: '0px',
+                threshold: 0.1 // 요소가 뷰포트의 10% 이상 보일 때
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 요소가 화면에 나타나면 'is-visible' 클래스를 추가하여 애니메이션 실행
+                        entry.target.classList.add('is-visible');
+                        // 한 번 나타난 요소는 더 이상 관찰하지 않습니다.
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // 모든 대상 요소에 대해 관찰을 시작합니다.
+            elementsToObserve.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>
